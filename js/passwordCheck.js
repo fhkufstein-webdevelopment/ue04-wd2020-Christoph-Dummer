@@ -79,23 +79,30 @@ function PasswordChecker(wrapperId, passwordInputFieldId, passwordSubmitButtonId
         }
     };
 
+
+    var password = document.getElementById("password");
     /*
     This method should return true if the length of passwordField value is greater or equal to this.minLength
      */
     this.checkForLength = function() {
-        //@todo
-        //have a look at javascript string methods and properties
-        return true; //this needs to be replaced!
+        if (this.password.length >=8){
+            return true;
+        }
+        else {
+            return false;
+        }
     };
 
     /*
     This method returns true if no special Character "!§$_.:,;" is found in this.password - otherwise false
      */
     this.checkForSpecialCharacters = function() {
-        //@todo
-        //have a look at javascript string methods and properties
-        //you could probably "match" it somehow
-        return true; //this needs to be replaced!
+        if (this.password.contains(("!"||"§"||"$"||"_"||"."||":"||","||";")){
+            return true;
+        }
+        else {
+            return false;
+        }
     };
 }
 
