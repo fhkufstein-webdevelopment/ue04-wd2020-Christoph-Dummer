@@ -97,7 +97,7 @@ function PasswordChecker(wrapperId, passwordInputFieldId, passwordSubmitButtonId
     This method returns true if no special Character "!§$_.:,;" is found in this.password - otherwise false
      */
     this.checkForSpecialCharacters = function() {
-        if (this.password.contains(("!"||"§"||"$"||"_"||"."||":"||","||";")){
+        if (this.password.contains(("!"||"§"||"$"||"_"||"."||":"||","||";"))){
             return true;
         }
         else {
